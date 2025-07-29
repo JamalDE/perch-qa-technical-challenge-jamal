@@ -1,0 +1,11 @@
+{
+  "name": "John Doe",
+  "email": "john@email.com",
+  "phone": "383899292929",
+  "street": "Testville",
+  "city": "Newyork",
+  "state": "Jersey",
+  "zipCode": "12345",
+  "country": "USA",
+  "invalidPhone":"invalidphonenumber"
+}
