@@ -12,3 +12,21 @@ Then('I should see the main content', () => {
 Then('I should see the full list of products', () => {
     HomePage.verifyProductsGrid();
 });
+
+When("I click on sort button", () => {
+    HomePage.clickSortButton();
+});
+
+Then("Products should be sorted based on price acendingly", () => {
+    HomePage.verifyProductSortAssending();
+});
+
+When("I click on sort button for descending", () => {
+    HomePage.clickSortButton();
+})
+
+Then("Products should be sorted based on price descendingly", ()=> {
+    HomePage.verifyProductSortDescending();
+})
+
+
