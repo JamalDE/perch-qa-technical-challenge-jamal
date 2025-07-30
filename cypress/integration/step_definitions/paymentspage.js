@@ -15,6 +15,10 @@ And('I click Pay', () => {
   PaymentPage.clickPay();
 });
 
+And('I get the order id', ()=>{
+  PaymentPage.fetchOrderId();
+})
+
 Then("I should be redirected to the success page", () => {
   PaymentPage.verifyPaymentSuccess();
 });

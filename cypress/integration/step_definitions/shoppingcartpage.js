@@ -21,22 +21,11 @@ Then('the total should update accordingly', () => {
 
 Given('I have multiple products in my cart', () => {
 
-    
-    /*
-  cy.visit('/product/2');
-  cy.get('[data-testid="add-to-cart"]').click();
-
-  cy.visit('/product/3');
-  cy.get('[data-testid="add-to-cart"]').click();
-
-  cy.visit('/cart');
-  */
 
   CartPage.addMultipleItemsInCart();
 });
 
 When('I click {string} on one', (buttonText) => {
-//   cy.contains('[data-testid="cart-remove-button"]', buttonText).first().click();
   CartPage.removeFirstProduct();
 });
 

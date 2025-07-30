@@ -3,7 +3,9 @@ class HomePage {
         mainContent: () => cy.get('[data-testid="home-page"]'),
         productsGrid: () => cy.get('.products-grid'),
         sortButton: () => cy.get('[data-testid="sort-price"]'),
-        productPrices: () => cy.get('.product-price')
+        productPrices: () => cy.get('.product-price'),
+        profileButton: () => cy.get('[data-testid="nav-to-profile"]'),
+        cartButton: () => cy.get('[data-testid="nav-to-cart"]')
     }
 
     visit() {
@@ -14,6 +16,18 @@ class HomePage {
         this.elements.mainContent().should('be.visible');
     }
 
+    verifyProfileButton(){
+        this.elements.profileButton().should('be.visible');
+    }
+
+    verifyCartButton(){
+        this.elements.cartButton().should('be.visible');
+    }
+
+    clickProfileButton(){
+        this.elements.profileButton().click();
+    }
+    
     verifyProductsGrid() {
         this.elements.productsGrid().should('be.visible');
     }

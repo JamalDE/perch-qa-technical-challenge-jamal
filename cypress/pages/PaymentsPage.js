@@ -6,7 +6,9 @@ class PaymentPage {
     cvvField: () => cy.get('#cvv'),
     payButton: () => cy.get('[data-testid="complete-payment"'),
     successIcon: () => cy.get('.success-icon'),
-    errorMessage: () => cy.get('.error-message')
+    errorMessage: () => cy.get('.error-message'),
+    orderId: () => cy.get('[data-testid="order-number"]')
+
   };
 
   visit() {

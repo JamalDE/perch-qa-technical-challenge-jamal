@@ -7,7 +7,8 @@ class CartPage {
     cartItems: () => cy.get('.cart-item'),
     removeButtons: () => cy.get('.remove-item'),
     productTitles: () => cy.get('.item-name'),
-    continueShoppingButton: () => cy.get('[data-testid="continue-shopping"]')
+    continueShoppingButton: () => cy.get('[data-testid="continue-shopping"]'),
+    proceedToCheckoutButton: () => cy.get('[data-testid="proceed-to-checkout"]')
   };
 
     verifyQuantity(expectedQuantity) {
@@ -17,6 +18,10 @@ class CartPage {
 
   changeQuantity(quantity) {
     this.elements.quantityDropdown().select(quantity);
+  }
+
+  clickProceedToCheckoutButton(){
+    this.elements.proceedToCheckoutButton().click();
   }
 
   verifyTotalUpdated(expectedTotal) {
