@@ -86,7 +86,7 @@ Navigate to the Order History page.
 
 Locate the corresponding order and review the Total Amount shown.
 
-🔍 Expected Behavior:
+Expected Behavior:
 The Total Amount should correctly reflect the product of unit price × quantity.
 
 For a $3 item bought in a quantity of 3, the total should be $9.
